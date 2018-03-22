@@ -6,7 +6,7 @@ python:
 
    要求: 从数据库读取然后显示到前台.
 
-1. restful api接口如何编写
+2. restful api接口如何编写
 
 ```
 serializers里面的 class Mate\(\): 下 fields 和 excloud 作用
@@ -24,7 +24,7 @@ serializers里面的 class Mate\(\): 下 fields 和 excloud 作用
     类接收执行
    ```
 
-1. Python基础面试题, 多做多记
+2. Python基础面试题, 多做多记
 
 ---
 
@@ -32,9 +32,9 @@ serializers里面的 class Mate\(\): 下 fields 和 excloud 作用
 
 1. 前端添加ansible模块任务时, 后台执行流程
 
-1. 前端删除ansible模块任务时, 后台执行流程
+2. 前端删除ansible模块任务时, 后台执行流程
 
-1. 执行任务
+3. 执行任务
 
 ---
 
@@ -78,6 +78,8 @@ namespace如何隔离dnsmasq
 ```
 
 vxlan下vm的上网网络流程.
+
+
 
 vxlan模式下vm之间是怎么通信
 
