@@ -79,6 +79,10 @@ namespace如何隔离dnsmasq
 
 vxlan下vm的上网网络流程.
 
+      https://www.cnblogs.com/CloudMan6/p/6058985.html
+
+
+
 
 
 vxlan模式下vm之间是怎么通信
