@@ -36,6 +36,8 @@ serializers里面的 class Mate\(\): 下 fields 和 excloud 作用
 
 3. 执行任务
 
+4. ansible执行任务时,用户无感知. 任务在后台执行.
+
 ---
 
 python
