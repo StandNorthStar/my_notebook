@@ -1,0 +1,52 @@
+1. ViewSet和APIView的区别, 还有ModelViewSet
+	from rest_framework.viewsets import ViewSet
+	from rest_framework.views import APIView
+
+2. 在ViewSet下调用update和perform_update区别.(partial_update)
+	rest_framework/mixins.py
+	class UpdateModelMinxn
+	
+3. 怎么自定义获取数据集get_query
+
+4. 显示方式
+	所有数据列表显示; 	animals/all
+	根据id显示单条数据	animals/<name>
+
+5. 为什么restful获取页面信息有时候是 request, 有时候是self.kwargs
+	post(self, request, *args, **kwargs)
+	获取页面返回的信息 有时候是get函数里面的request
+	有时候是类里面的self.kwargs
+	------------------------------
+	场景描述: 
+	1. 在url没有pk的情况下 获取页面的变量是(get/post)函数里面的request变量
+	2. 在URL指定PK根据ID显示具体信息时, 获取页面的信息是APIView类里面的self.kwargs 获取信息	
+
+	(self.kwargs是获取URL里面?P后面的参数; post里面的request)
+
+	restful查询参数
+
+
+6. restful的request查询参数
+
+
+--------------------
+Minxins:
+	create:
+		serializer = get_serializer()	
+
+	list:
+		queryset = filter_queryset(self.get_queryset())
+
+	retrieve:
+		get_object()
+		get_serializer()
+
+	update:
+		get_object()
+		get_serializer()
+
+	destroy:
+		get_object()
+		
+	[instance, serializer]
+
