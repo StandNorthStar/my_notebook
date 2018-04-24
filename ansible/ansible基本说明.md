@@ -22,7 +22,7 @@ ansible执行流程:
 
 2. 在task\__queue_\_manager.py 中找到run.
 
-   \`\`\`  
+  
    \(1\). 初始化时会设置队列.
 
    \(2\). 会根据options, variable\_manager ,password等信息设置成一个PlayContext信息\(代码位置playbooks/playcontenx.py\)
@@ -33,9 +33,11 @@ ansible执行流程:
 
    \(5\). 在strate\_loader 执行完run后, 会判断action类型. 如果是meta类型会单独执行\(不是具体的ansible模块\). 而其他模块时, 会加载到队列\_queue\_task
 
-       \(6\). 在队列中会调用workerprocess去处理, 在workerprocess实际run之后, 会使用TaskExecutor进行执行
+   ```
+   \(6\). 在队列中会调用workerprocess去处理, 在workerprocess实际run之后, 会使用TaskExecutor进行执行
 
-       \(7\). 在TaskExecutor中会设置connection插件, 并且根据task类型 获取action插件\(就是对应的模块\), 如果模块有自定义的执行,则会执行自动以的action, 如没有会使用nolmal或者async
+   \(7\). 在TaskExecutor中会设置connection插件, 并且根据task类型 获取action插件\(就是对应的模块\), 如果模块有自定义的执行,则会执行自动以的action, 如没有会使用nolmal或者async
+   ```
 
-\`\`\`
+
 
