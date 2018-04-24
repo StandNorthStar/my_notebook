@@ -38,12 +38,12 @@ ansible执行流程:
    \(7\). 在TaskExecutor中会设置connection插件, 并且根据task类型 获取action插件\(就是对应的模块\), 如果模块有自定义的执行,则会执行自动以的action, 如没有会使用nolmal或者async
 
     (8). 在action插件中定义着执行的顺序, 以及具体操作
- 
+
     (9). 通过connection插件来执行action的各个操作步骤
    ```
 
 ```
-
+参考: https://blog.csdn.net/mx472756841/article/details/53886456
 ```
 
 
